@@ -54,3 +54,32 @@ const imagens = [
     }
   ];
 
+var contador = 0;
+
+
+
+function updateAnterior() {
+
+  let imagemEL = document.querySelector('#slide');
+  imagemEL.src = 'http://fegemo.github.io/cefet-web/images/osiris/'+imagens[contador];
+  contador--;
+
+  
+}
+
+let botaoAnt = document.querySelector("#anterior");
+
+botaoAnt.addEventListener('click', updateAnterior);
+
+function updateProximo() {
+
+  let imagemEL = document.querySelector('#slide');
+  imagemEL.src = 'http://fegemo.github.io/cefet-web/images/osiris/07-touch-and-go-e-detritos-suspensos-em-2020.webp';
+  contador++;
+
+}
+
+let botaoProx = document.querySelector("#proximo");
+
+botaoProx.addEventListener('click', updateProximo);
+
